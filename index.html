@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Calculando el total</title>
+</head>
+<body>
+    <div class="container__general">
+        <div class="card">
+            <div class="card__left">
+                <h3>M2 chip model</h3>
+                <h2>MacBook Air</h2>
+                <img id="image" src="./assets/img/midnight.jpg" alt="macbook">
+                <div class="container__price">
+                    <h3>Precio unitario:</h3>
+                    <h2 class="price"></h2>
+                </div>
+            </div>
+            
+            <div class="card__right">
+                <div class="options">
+                    <div class="cantidad__container">
+                        <h2>Cantidad:</h2>
+                        <input type="number" id="quantity" min="1" value="1">
+                    </div>
+                    <div class="color__container">
+                        <h2>Color:</h2>
+                        <select name="color" id="color" onchange="cambioImagen()">
+                            <option value="midnight">Midnight</option> 
+                            <option value="starlight">Starlight</option> 
+                            <option value="space-gray">Space Gray</option>
+                            <option value="silver">Silver</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="calcular">Calcular Total</button>
+                <div class="summary">
+                    <h2>Resumen</h2>
+                    <hr>
+                    <div class="quantity__total">
+                        <h3>Cantidad:</h3>
+                        <h2 class="quantity__total__number">0</h2>
+                    </div>
+                    <div>
+                        <h3>Color:</h3>
+                        <h2 class="selected__color"></h2>
+                    </div>
+                    <div>
+                        <h3>Total:</h3>
+                        <h2 class="price__total">$0</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
